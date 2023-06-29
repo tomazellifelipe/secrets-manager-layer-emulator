@@ -7,6 +7,7 @@ import json
 from dotenv import dotenv_values
 from fastapi import FastAPI, Header
 from typing import Any
+
 app = FastAPI()
 
 
@@ -29,7 +30,7 @@ def get_secret(
     secrets_token : str
         Header:
             Alias : X-Aws-Parameters-Secrets-Token.
-    
+
     Returns
     -------
     secretString: dict[str, Any]
@@ -37,7 +38,7 @@ def get_secret(
 
     Examples
     --------
-    >>> secrets=$(curl localhost:2773/secretsmanager/get?secretId=my-secret -H '{"X-Aws-Parameters-Secrets-Token": ""}') 
+    >>> secrets=$(curl localhost:2773/secretsmanager/get?secretId=my-secret -H '{"X-Aws-Parameters-Secrets-Token": ""}')
     >>> secrets
     '{"SecretString": "{\"user\":\"admin\",\"password\":\"EXAMPLE\"}"}'
     """
