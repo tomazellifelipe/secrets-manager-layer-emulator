@@ -27,6 +27,7 @@ def get_secret(
     Parameters
     ----------
     secretId : str
+
     secrets_token : str
         Header:
             Alias : X-Aws-Parameters-Secrets-Token.
